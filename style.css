@@ -1,0 +1,617 @@
+/*
+ Theme Name:   R.Deco Jewelry
+ Theme URI:    http://rdecodesigns/rdecojewelry
+ Description:  My first child theme, based on Responsive & WooCommerce
+ Author:       Annabelle Lee
+ Author URI:   http://rdecodesigns.com
+ Template:     responsive
+ Version:      1.0.0
+
+*/
+
+/* COLORS *************************************************************
+
+black	           -> #0D1BLE • rgb(13, 27, 30);
+dark red		   -> #6E0D25 • rgb(110, 13, 37); 
+tomato red         -> #A13034 • rgb(161, 48, 52);
+beige              -> #DCCCA3 • rgb(220, 204, 163);
+ecru               -> #FLEBE4 • rgb(241, 235, 228);
+		
+***********************************************************************/
+
+/* FONTS **************************************************************	
+
+sans-serif	-> font-family: 'Lato', sans-serif;
+serif:   	-> font-family: 'Adamina', serif;
+
+************************************************************************/
+
+
+/* START OF GLOBAL STYLES **********************************************/
+
+a{
+	color:black;
+}
+
+a:hover{
+	color: rgba(0, 0, 0, 0.42);
+}
+
+#container{
+	max-width: 1200px;
+}
+
+#wrapper{
+	border: none;
+}
+
+/* END OF GLOBAL STYLES ***************************************************/
+
+/* START OF MAIN NAVIGATION  **********************************************/
+
+#logo{
+	margin-bottom: 5%;
+	float: none;
+	text-align: center;
+}
+
+#logo a img:hover{
+	-webkit-transform:scale(0.9,0.9);
+	-ms-transform:scale(0.9,0.9);
+		transform:scale(0.9,0.9);
+		-webkit-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;   
+}
+
+.main-nav {
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+	font-weight: 300;
+	font-size: 1.2em;
+}
+
+.menu,
+.menu .current_page_item a, 
+.menu .current-menu-item a,
+ul.menu > li:hover,
+.menu a:hover{
+	background: white;
+}
+
+
+.menu a{
+	border: none;
+	text-shadow: none;
+	color: rgb(13, 27, 30);	
+	font-family: 'Adamina', serif; 
+	font-size: 1.2em;
+	font-variant: small-caps;
+	font-weight: 500;
+}
+
+.menu a:hover{
+	color: rgb(220, 204, 163);
+}
+
+ul.menu > li:hover{
+	color: black;
+}
+
+/* nav */
+
+.main-nav  ul {
+	position: relative;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: flex;
+	margin: 0 auto;
+	padding: 0;
+	max-width: 900px;
+	list-style: none;
+	-ms-box-orient: horizontal;
+	-ms-box-pack: center;
+	-webkit-flex-flow: row wrap;
+	-moz-flex-flow: row wrap;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-justify-content: center;
+	-moz-justify-content: center;
+	-ms-justify-content: center;
+	justify-content: center;
+}
+
+.main-nav ul li {
+	position: relative;
+	display: block;
+	margin: 0;
+	text-align: center;
+	z-index: 1;	
+	-webkit-flex: 1;
+	-moz-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+}
+
+.main-nav ul li a {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+/* nav underline style */
+
+ul.menu li a {
+	padding: 0.25em 0 0.5em;
+	-webkit-transition: color 0.2s;
+	transition: color 0.2s;
+}
+
+ul.menu li a::after {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 6px;
+	background: #a13034;
+	content: '';
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+	-webkit-transform: translate3d(0,150%,0);
+	transform: translate3d(0,150%,0);
+}
+
+ul.menu li.current_page_item a::after {
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+
+
+/* END OF MAIN NAVIGATION **********************************************/
+
+/* START OF LANDING PAGE  **********************************************/
+
+/* ADD IMAGES FOR LANDING PAGE HERE */
+
+.dg-wrapper a#img1{
+	background: transparent url(imgs/1.jpg) no-repeat;	
+}
+
+.dg-wrapper a#img2{
+	background: transparent url(imgs/rdecojewelry-logo-md.png) no-repeat;
+}
+
+.dg-wrapper a#img3{
+	background: transparent url(imgs/1.jpg) no-repeat;	
+
+}
+
+/* END OF IMAGES FOR LANDING PAGE  */
+
+header.landing-page{
+	text-align: center;
+}
+
+.landing-page-header{
+	margin-bottom: 7%;
+	display: inline-block;
+	font-family: 'Lato', sans-serif;
+	color: rgb(13, 27, 30);
+	transform: scale(2, 2.5);
+	letter-spacing: 1px;
+	font-size: 2em;
+}
+
+.landing-page-intro{
+	font-family: 'Adamina', serif;
+
+	margin-bottom: 10%;
+	letter-spacing: 1px;
+	font-size: 2.5em;	
+}
+
+.landing-page-btn-wrapper{
+	position:relative;	
+	margin-top: 7%;	
+	background:white;
+	width: 100%;
+	height: 150px;
+	z-index: 999;
+}
+
+/* enter site button */
+
+.button.button--shikoba {
+	position: absolute;
+	margin: auto;	
+	padding: 1em 30px 1em 50px;
+	width: 20%;
+	left: 0;
+	right: 0;
+	top:0;
+	font-family: 'Adamina', serif;
+	font-size: 1.2em;
+	font-variant: small-caps;
+	letter-spacing: 1px;
+	overflow: hidden;
+	background: #fff;
+	color: #37474f;
+	border-color: #37474f;
+	-webkit-transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+	transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.button--shikoba > span {
+	display: inline-block;
+	-webkit-transform: translate3d(-10px, 0, 0);
+	transform: translate3d(-10px, 0, 0);
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+	-webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+	transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
+
+.button--shikoba .button__icon {
+	position: absolute;
+	font-size: 18px;
+	-webkit-transform: translate3d(-90px, .5em, 0);
+	transform: translate3d(-90px, .5em, 0);
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+	-webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+	transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+	opacity:0;
+	color:white;
+	left: 12%;
+	top: 35%;
+}
+
+.button--shikoba:hover .button__icon,
+.button--shikoba:hover > span {
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	opacity:9;
+	color:black;
+}
+
+.button--shikoba:hover {
+	background: white;
+	color: black;
+}
+
+/* end of enter site button */
+
+/* landing page carousel */
+
+.dg-container{
+	width: 100%;
+	height: 450px;
+	position: relative;
+}
+
+.dg-wrapper{
+	position: relative;	
+	margin: 0 auto;	
+	width: 481px;
+	height: 316px;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-perspective: 1000px;
+	-moz-perspective: 1000px;
+	-o-perspective: 1000px;
+	-ms-perspective: 1000px;
+	perspective: 1000px;
+}
+
+.dg-wrapper a{
+	position: absolute;		
+	display: block;
+	width: 482px;
+	height: 316px;
+	left: 0;
+	top: 0;	
+	box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
+}
+
+.dg-wrapper a#img1,
+.dg-wrapper a#img2,
+.dg-wrapper a#img3{
+	width: 100%;
+	height: 100%;
+}
+
+.dg-wrapper a.dg-transition{
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+.dg-wrapper a img{
+	display: block;
+	padding: 41px 0px 0px 1px;
+}
+
+.dg-wrapper a div{
+	position: absolute;
+	display: none;
+	width: 100%;
+	bottom: -55px;
+	font-family: 'Lato', sans-serif;		
+	text-align: center;
+	line-height: 50px;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+	color: #333;
+	font-size: 16px;
+}
+
+.dg-wrapper a.dg-center div{
+	display: block;
+}
+
+.dg-container nav{
+	position: absolute;
+	margin-left: -29px;	
+	width: 58px;
+	bottom: 40px;
+	left: 50%;
+	z-index: 1000;	
+}
+
+.dg-container nav span{
+	text-indent: -9000px;
+	float: left;
+	cursor:pointer;
+	width: 24px;
+	height: 25px;
+	background: transparent url(imgs/red-arrow.png) no-repeat top left;
+}
+
+.dg-container nav span:hover{
+	opacity: 0.7;
+	webkit-transform:scale(0.9,0.9);
+		-ms-transform:scale(0.9,0.9);
+		transform:scale(0.9,0.9);
+	-webkit-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;  
+}
+.dg-container nav span.dg-next{
+	margin-left: 10px;	
+	background-position: top right;
+}
+
+/* end of landing page carousel */
+
+/* END OF LANDING PAGE  ****************************************************************/
+
+/* START OF PRODUCTS ARCHIVE (SHOP) PAGE  **********************************************/
+
+
+grid.col-620{
+	font-family: 'Lato', sans-serif;
+}
+
+ul.products{
+	font-family: 'Adamina', serif;
+}
+
+ul.products > li{
+	height: 400px;
+}
+
+.page-title{
+	font-variant: small-caps;
+}
+
+.woocommerce span.onsale{
+	background: rgb(161, 48, 52);
+}
+
+.woocommerce ul.products li.product .price{
+	height: 40px;
+	color: black;
+}
+
+.woocommerce ul.products li.product .price ins{
+	color: rgb(161, 48, 52);
+}
+
+.woocommerce .woocommerce-ordering{
+	margin: 3% 0% 4em 0;
+}
+
+
+.woocommerce .woocommerce-ordering, 
+.woocommerce-page .woocommerce-ordering{
+	float: left;
+}
+
+.woocommerce .woocommerce-result-count, 
+.woocommerce-page .woocommerce-result-count{
+	display: none;
+}
+
+.woocommerce ul.products li.product .button{
+	border: 4px solid black;
+	border-radius: 0;
+	background: white;
+	font-variant: small-caps;
+}
+
+.woocommerce ul.products li.product .button:hover{
+		-webkit-transform:scale(0.9,0.9);
+	-ms-transform:scale(0.9,0.9);
+		transform:scale(0.9,0.9);
+		-webkit-transition: all 1s ease-in-out;
+	transition: all 0.5s ease-in-out;  
+}
+	
+
+/* START OF PRODUCTS ARCHIVE (SHOP) PAGE  **********************************************/
+
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------- START OF MEDIA QUERIES ------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+/*------------ START OF MIN-WIDTH 1200px and MAX-WIDTH 1500px (bootstrap lrg | desktop)-------------*/
+@media only screen and (min-width: 75.000em) and (max-width: 93.750em) {
+		
+}
+
+/*------------ END OF MIN-WIDTH 1200px and MAX-WIDTH 1500px (bootstrap lrg | desktop)-------------*/
+
+/*------------ START OF MIN-WIDTH 768px and MAX-WIDTH 1199px ( ipad landscape & portrait)-------------*/
+
+@media only screen and (min-width: 48.000em) and (max-width: 74.938em) {
+
+	  
+}
+
+/*------------ END OF MIN-WIDTH 992px and MAX-WIDTH 1199px (bootstrap md | ipad landscape)-------------*/
+
+/*------------ START OF MIN-WIDTH 768px and MAX-WIDTH 991px (bootstrap sm | ipad portrait)-------------*/
+
+@media only screen and (min-width: 48.000em) and (max-width: 61.938em) {
+
+/* start of landing page */
+
+.button.button--shikoba{
+	width: 35%;
+}
+
+.landing-page-btn-wrapper{
+	margin-top:0;
+}
+
+ .dg-wrapper a#img2, 
+ .dg-wrapper a#img3,
+ section.dg-container nav{
+	 display: none;
+ }
+/* end of landing page */	
+
+}
+
+/*------------ END OF MIN-WIDTH 768px and MAX-WIDTH 991px (bootstrap sm | ipad portrait)-------------*/
+
+
+/*------------ START OF MIN-WIDTH 320px and MAX-WIDTH 767px (bootstrap xs | iphone4, iphone5, iphone6, iphone6+)-------------*/
+
+@media only screen and (min-width: 20.000em) and (max-width: 47.938em) {
+	
+	/* start of landing page */
+	
+	.landing-page-btn-wrapper{
+		margin-top:0;
+	}
+	
+	 .dg-wrapper a#img2, 
+	 .dg-wrapper a#img3,
+	 section.dg-container nav{
+		 display: none;
+	 }
+	/* end of landing page */	
+			
+}
+
+/*------------ END OF MIN-WIDTH 320px and MAX-WIDTH 767px (bootstrap xs | iphone4, iphone5, iphone6)-------------*/
+
+/*------------ START OF MIN-WIDTH 320px and MAX-WIDTH 415px ( iphone4, iphone5, iphone6, iphone6+ portrait)-------------*/
+
+@media only screen and (min-width: 20.000em) and (max-width: 25.938em) {
+	
+	/* start of landing page */
+	
+	.button.button--shikoba{
+		width: 90%;
+	}
+	
+	.dg-wrapper{
+		width: 221px;
+	}
+	
+	header.landing-page > h1{
+		margin-bottom: 3%;
+		width: 60%;
+		padding: 3%;
+		font-size: 1em;
+	}
+	
+	header.landing-page > p{
+		font-size: 1.5em;
+	}
+	
+	.landing-page-intro{
+		margin-bottom: 15%;
+	}
+
+	/* end of landing page */	
+	
+
+ 	
+}
+
+/*------------ END OF MIN-WIDTH 320px and MAX-WIDTH 415px (iphone4, iphone5, iphone6, iphone6+ portrait)-------------*/
+
+/*------------ START OF MIN-WIDTH 416px and MAX-WIDTH 568px ( iphone4, iphone5 landscape)-------------*/
+
+@media only screen and (min-width: 26.000em) and (max-width: 35.500em) {
+	
+	/* start of landing page */
+	
+	.button.button--shikoba{
+		width: 45%;
+	}
+	
+	header.landing-page > h1{
+		margin-bottom: 3%;
+		font-size: 1.5em;
+	}
+	
+	.landing-page-intro{
+		margin-bottom: 15%;
+	}
+
+	/* end of landing page */	
+		
+}
+
+/*------------ END OF MIN-WIDTH 416px and MAX-WIDTH 568px (iphone4, iphone5 landscape)-------------*/
+
+/*------------ START OF MIN-WIDTH 569px and MAX-WIDTH 737px ( iphone6, iphone6+ landscape)-------------*/
+
+@media only screen and (min-width: 35.563em) and (max-width: 46.063em) {
+
+/* start of landing page */
+
+	header.landing-page > h1{
+		margin-bottom: 3%;
+		font-size: 1.7em;
+	}
+	
+	.button.button--shikoba{
+		width: 35%;
+	}
+	
+/* end of landing page */				
+}
+
+/*------------ END OF MIN-WIDTH 569px and MAX-WIDTH 737px (iphone6, iphone6+ landscape)-------------*/
+
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------- END OF MEDIA QUERIES -----------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+
+
