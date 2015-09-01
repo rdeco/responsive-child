@@ -41,6 +41,17 @@ a:hover{
 	max-width: 1200px;
 }
 
+ins {
+	color: rgb(161, 48, 52);	
+}
+
+
+
+p{
+	font-family: 'Adamina', serif;
+	letter-spacing: 1px;
+}
+
 #wrapper{
 	border: none;
 }
@@ -91,7 +102,7 @@ ul.menu > li:hover,
 }
 
 .menu a:hover{
-	color: rgb(220, 204, 163);
+	color: rgb(161, 48, 52);
 }
 
 ul.menu > li:hover{
@@ -173,6 +184,83 @@ ul.menu li.current_page_item a::after {
 
 
 /* END OF MAIN NAVIGATION **********************************************/
+
+/* START OF SIDEBAR WIDGETS  ********************************************/
+
+.widget-wrapper{
+	border: none;
+	border-radius: 0;
+	margin-left: 10%;
+	width: 70%;
+}
+
+/* cart */
+
+#widgets a.button.wc-forward{
+	padding: 3%;
+}
+
+#widgets ul li a{
+	font-family: 'Adamina', serif;
+	font-weight: normal;
+}
+
+.widget-title h3{
+	font-family: 'Lato', sans-serif;
+	font-variant: small-caps;
+}
+
+.woocommerce ul.cart_list li img, 
+.woocommerce ul.product_list_widget li img {
+	margin-top: 0%;
+	margin-right: 8%;
+}
+
+.woocommerce .widget_shopping_cart .total, 
+.woocommerce.widget_shopping_cart .total {
+	text-align: right;
+}
+
+p.buttons{
+	text-align: center;
+}
+
+p.buttons > a.button.wc-forward,
+p.buttons > a.button.checkout.wc-forward{
+	padding: 2%;
+	font-family: 'Lato', sans-serif;		
+}
+
+p.total{
+	font-family: 'Lato', sans-serif;	
+}
+
+.woocommerce a.button.wc-forward {
+	background: none;
+}
+
+/* product categories */
+
+ul.product-categories,
+ul.children{
+	list-style-type: none;
+			
+}
+.product-categories > li a{
+	font-family: 'Adamina', serif;
+	font-size: 1.2em;
+	font-variant: small-caps;
+}
+
+
+ul.children li a {
+	font-variant: initial;	
+	font-style: italic;
+	font-size: 1em;
+}
+
+/* END OF SIDEBAR WIDGETS  **********************************************/
+
 
 /* START OF LANDING PAGE  **********************************************/
 
@@ -441,6 +529,7 @@ ul.products > li{
 }
 
 .woocommerce ul.products li.product .button{
+	margin-top: 2%;
 	border: 4px solid black;
 	border-radius: 0;
 	background: white;
@@ -454,9 +543,68 @@ ul.products > li{
 		-webkit-transition: all 1s ease-in-out;
 	transition: all 0.5s ease-in-out;  
 }
-	
 
-/* START OF PRODUCTS ARCHIVE (SHOP) PAGE  **********************************************/
+.woocommerce ul.products li.product h3{
+	height: 25px;
+	letter-spacing: 1px;
+}
+
+.woocommerce ul.products li.product .price del {
+	display: inline-block;
+}
+
+
+/* END OF PRODUCTS ARCHIVE (SHOP) PAGE  **********************************************/
+
+/* START OF PRODUCT PAGE  **********************************************/
+
+.woocommerce button.button.alt {
+	background: white;
+	color: black;
+	border: 3px solid black;
+	border-radius: 0;
+	font-family: 'Adamina', serif;
+	font-variant: small-caps;
+	font-weight: 100;
+}
+
+div.related.products{
+	margin-top: 15%;
+}
+
+div.related.products > h2{
+	font-variant: small-caps;	
+}
+
+div.panel.entry-content.wc-tab > h2 {
+	font-variant: small-caps;
+}
+
+h1.product_title.entry-title{
+	font-size: 2.2em;
+}
+
+.sku_wrapper,
+.posted_in,
+.tagged_as{
+	display: block;
+}
+
+.sku_wrapper,
+.posted_in a,
+.tagged_as a{
+	font-family: 'Adamina', serif;
+}
+
+.posted_in a,
+.tagged_as a{
+	font-style: italic;
+}
+
+/* END OF PRODUCT PAGE  **********************************************/
+
+
+
 
 
 /*--------------------------------------------------------------------------------------------------------------------*/
