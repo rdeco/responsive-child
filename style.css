@@ -29,14 +29,6 @@ serif:   	-> font-family: 'Adamina', serif;
 
 /* START OF GLOBAL STYLES **********************************************/
 
-a{
-	color:black;
-}
-
-a:hover{
-	color: rgba(0, 0, 0, 0.42);
-}
-
 #container{
 	max-width: 1200px;
 }
@@ -46,6 +38,17 @@ ins {
 }
 
 
+a:hover,
+
+.woocommerce #respond input#submit:hover, 
+.woocommerce a.button:hover, 
+.woocommerce button.button:hover, 
+.woocommerce input.button:hover{
+	color: rgba(0, 0, 0, 0.42);
+}
+
+
+
 .button.button--shikoba,
 .landing-page-intro,
 .menu a,
@@ -53,7 +56,8 @@ p,
 .product-categories > li a,
 .posted_in a,
 .sku_wrapper,
-.tagged_as a
+.tagged_as a,
+td.product-name,
 ul.products,
 #widgets ul li a,
 .woocommerce button.button.alt,
@@ -81,6 +85,10 @@ th,
 .widget-wrapper,
 .woocommerce-cart .cart-collaterals .cart_totals tr td, 
 .woocommerce-cart .cart-collaterals .cart_totals tr th,
+.woocommerce #respond input#submit:hover, 
+.woocommerce a.button:hover, 
+.woocommerce button.button:hover, 
+.woocommerce input.button:hover,
 #wrapper{
 	border: none;
 }
@@ -132,6 +140,7 @@ th,
 }
 
 .button.button--shikoba,
+div.cross-sells,
 div.panel.entry-content.wc-tab > h2, 
 div.related.products > h2,
 div.upsells.products > h2,
@@ -145,6 +154,7 @@ div.upsells.products > h2,
 	font-variant: small-caps;
 }
 
+a,
 .button--shikoba:hover .button__icon,
 .button--shikoba:hover > span,
 p.price > span,
@@ -596,6 +606,21 @@ h1.product_title.entry-title{
 /* START OF CART PAGE  **********************************************/
 
 
+dd.variation-colors{
+	margin: -7% 0 0 0;
+	width: 100%;
+	font-style: italic;	
+}
+
+form div {
+	margin: 0;
+	font-weight: 700;
+}
+
+td.product-name{
+	font-weight: 700;
+}
+
 td.product-thumbnail{
 	width: 20%;
 }
@@ -608,6 +633,17 @@ td.product-subtotal{
 
 td.product-remove{
 	width: 5%;
+}
+
+.woocommerce #respond input#submit, 
+.woocommerce a.button, 
+.woocommerce button.button, 
+.woocommerce input.button,
+.woocommerce #respond input#submit:hover, 
+.woocommerce a.button:hover, 
+.woocommerce button.button:hover, 
+.woocommerce input.button:hover{
+	background: white;
 }
 
 .woocommerce-cart table.cart img{
@@ -744,8 +780,6 @@ td.product-remove{
 
 	/* end of landing page */	
 	
-
- 	
 }
 
 /*------------ END OF MIN-WIDTH 320px and MAX-WIDTH 415px (iphone4, iphone5, iphone6, iphone6+ portrait)-------------*/
