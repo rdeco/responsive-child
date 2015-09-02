@@ -37,17 +37,13 @@ ins {
 	color: rgb(161, 48, 52);	
 }
 
-
 a:hover,
-
 .woocommerce #respond input#submit:hover, 
 .woocommerce a.button:hover, 
 .woocommerce button.button:hover, 
 .woocommerce input.button:hover{
 	color: rgba(0, 0, 0, 0.42);
 }
-
-
 
 .button.button--shikoba,
 .landing-page-intro,
@@ -79,6 +75,7 @@ p.total,
 
 a.button:hover,
 .menu a,
+.menu li li,
 table,
 td,
 th,
@@ -633,6 +630,26 @@ td.product-subtotal{
 
 td.product-remove{
 	width: 5%;
+}
+
+ul.sub-menu{
+	border: 1px solid black;
+	padding:10%;
+	margin-top: 10%;
+	width: 500px;
+	height: 100%;
+	
+}
+
+ul.sub-menu li a::after{
+	background: none;
+	
+}
+
+ul.sub-menu li a:hover{
+	color: rgb(220, 204, 163);
+	font-weight: 700;
+	border-radius: 0;
 }
 
 .woocommerce #respond input#submit, 
