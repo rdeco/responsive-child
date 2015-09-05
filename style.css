@@ -29,6 +29,11 @@ serif:   	-> font-family: 'Adamina', serif;
 
 /* START OF GLOBAL STYLES **********************************************/
 
+.breadcrumb-list,
+.woocommerce .woocommerce-breadcrumb{
+	padding-bottom: 10%;
+}
+
 #container{
 	max-width: 1200px;
 }
@@ -114,7 +119,7 @@ th,
 	color: rgb(161, 48, 52);	
 }
 
-
+p.form-submit,
 .woocommerce button.button.alt,
 .woocommerce-cart .wc-proceed-to-checkout,
 .woocommerce ul.products li.product .button{
@@ -804,8 +809,7 @@ ul.sub-menu li a:hover{
 
 
 
-div#content-blog h2  a {
-
+div#content-blog h2  a{
 	font-size: 1.5em;
 	color: rgba(13, 27, 30, 0.5);
 	font-variant: small-caps;
@@ -871,6 +875,30 @@ div#content-blog .post-entry {
 }
 
 /* END OF BLOG ARCHIVE PAGE  **********************************************/
+
+
+#author-meta{
+	border: 10px solid rgba(13, 27, 30, 0.1);
+	border-radius: 0;
+	background: transparent;
+}
+
+.entry-title.post-title {
+	color: rgba(13, 27, 30, 0.5);
+	font-variant: small-caps;	
+}
+
+p.form-submit{
+	padding: 1% 2%;
+	float: right;
+	clear: both;
+}
+
+#respond{
+	border: none;
+	background-color: transparent;
+	background-image: none;
+}
 
 
 /*--------------------------------------------------------------------------------------------------------------------*/
