@@ -876,6 +876,7 @@ div#content-blog .post-entry {
 
 /* END OF BLOG ARCHIVE PAGE  **********************************************/
 
+/* START OF SINGLE BLOG  PAGE  **********************************************/
 
 #author-meta{
 	border: 10px solid rgba(13, 27, 30, 0.1);
@@ -899,6 +900,75 @@ p.form-submit{
 	background-color: transparent;
 	background-image: none;
 }
+
+/* END OF SINGLE BLOG  PAGE  **********************************************/
+
+
+
+.wpcf7-form-control.wpcf7-text {
+  background: white;
+  transition-property: background;
+  transition-duration: 2s;
+  transition-timing-function: linear;
+}
+
+.wpcf7-form-control.wpcf7-text:hover{
+  background:black;
+  color: white;
+
+}
+
+span.wpcf7-form-control-wrap.your-name input,
+span.wpcf7-form-control-wrap.your-email input,
+span.wpcf7-form-control-wrap.your-subject input{
+	border-bottom: 5px solid rgba(13, 27, 30, 0.1);
+	box-shadow: none;
+	height: 50px;
+}
+
+span.wpcf7-form-control-wrap.your-email input[type="email"]{
+	border-bottom: 5px solid rgba(13, 27, 30, 0.1);
+	border-top: none;
+	border-left: none;
+	border-right: none;
+}
+
+form.wpcf7-form p{
+	width: 50%;
+	height: 50px;
+	margin: 3% 0;
+}
+
+form.wpcf7-form input{
+	width: 100%;
+}
+
+p.message{
+	position: absolute;
+	top: 35%;
+	bottom: 0;
+	right: -6%;
+	
+}
+
+
+div.send{
+	float:right;
+	margin: 0 1% 0 0;
+}
+
+input[type="submit"].wpcf7-form-control.wpcf7-submit{
+	background: rgba(13, 27, 30, 0.4);
+	color: white;
+	text-shadow: none;
+}
+
+span.wpcf7-form-control-wrap.your-message textarea{
+	border: 7px solid rgba(13, 27, 30, 0.4);
+	height: 250px;
+	width: 500px;
+}
+
 
 
 /*--------------------------------------------------------------------------------------------------------------------*/
