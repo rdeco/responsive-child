@@ -31,7 +31,7 @@ get_header(); ?>
 
 			<?php get_template_part( 'loop-header', get_post_type() ); ?>
 
-				<h1><?php the_title(); ?></h1>
+				<h1 class="page-h1"><?php the_title(); ?></h1>
 			<?php responsive_entry_before(); ?>
 			<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<?php responsive_entry_top(); ?>
