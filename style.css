@@ -31,7 +31,7 @@ serif:   	-> font-family: 'Adamina', serif;
 
 .breadcrumb-list,
 .woocommerce .woocommerce-breadcrumb{
-	padding-bottom: 10%;
+	padding-bottom: 3%;
 }
 
 #container{
@@ -123,7 +123,6 @@ p.form-submit,
 .woocommerce button.button.alt,
 .woocommerce-cart .wc-proceed-to-checkout,
 .woocommerce ul.products li.product .button{
-
 	border: 3px solid black;
 	border-radius: 0;
 	color: black;
@@ -138,11 +137,11 @@ p.form-submit,
 .woocommerce ul.products li.product .button:hover /* products archive */{
 	color: black;
 	background: white;
+	transform:scale(0.9,0.9);
 		-webkit-transform:scale(0.9,0.9);
-	-ms-transform:scale(0.9,0.9);
-		transform:scale(0.9,0.9);
-		-webkit-transition: all 1s ease-in-out;
-	transition: all 0.5s ease-in-out; 	
+		-ms-transform:scale(0.9,0.9);
+	transition: all 0.5s ease-in-out;		
+		-webkit-transition: all 1s ease-in-out; 	
 }
 
 .button.button--shikoba,
@@ -807,16 +806,6 @@ ul.sub-menu li a:hover{
 
 /* START OF BLOG ARCHIVE PAGE  **********************************************/
 
-
-
-div#content-blog h2  a{
-	font-size: 1.5em;
-	color: rgba(13, 27, 30, 0.5);
-	font-variant: small-caps;
-}
-
-
-
 .author-avatar{
 	margin:  2% 0;
 	display: inline-block;
@@ -834,9 +823,27 @@ div#content-blog h2  a{
     font-size: 2em;
     font-variant: small-caps;
     text-align: center;
-    -webkit-box-shadow: -8px 8px 0px 0px rgba(86,80,65,1);
--moz-box-shadow: -8px 8px 0px 0px rgba(86,80,65,1);
-box-shadow: -8px 8px 0px 0px rgba(86,80,65,1);
+	box-shadow: -8px 8px 0px 0px rgba(86,80,65,1);    
+    	-webkit-box-shadow: -8px 8px 0px 0px rgba(86,80,65,1);
+		-moz-box-shadow: -8px 8px 0px 0px rgba(86,80,65,1);
+}
+
+
+div#content-blog h2  a{
+	font-size: 1.5em;
+	color: rgba(13, 27, 30, 0.5);
+	font-variant: small-caps;
+}
+
+
+div#content-blog .post-edit{
+	display: inline-block;
+	float: right;
+}
+
+div#content-blog .post-entry {
+	border-bottom: 6px solid rgba(13, 27, 30, 0.1);
+	margin: 8% 0;
 }
 
 .fa.fa-tags{
@@ -847,16 +854,6 @@ box-shadow: -8px 8px 0px 0px rgba(86,80,65,1);
 	float:left;
 	width: 100%;
 	margin: -5% 0 0 11%;
-}
-
-div#content-blog .post-edit{
-	display: inline-block;
-	float: right;
-}
-
-div#content-blog .post-entry {
-	border-bottom: 6px solid rgba(13, 27, 30, 0.1);
-	margin: 8% 0;
 }
 
 .post-entry > p{	
@@ -871,7 +868,6 @@ div#content-blog .post-entry {
 	font-style: italic;
 	float: right;
 	clear: none;
-	
 }
 
 /* END OF BLOG ARCHIVE PAGE  **********************************************/
@@ -903,19 +899,40 @@ p.form-submit{
 
 /* END OF SINGLE BLOG  PAGE  **********************************************/
 
+/* START OF CONTACT/PAGE  **********************************************/
 
-
-.wpcf7-form-control.wpcf7-text {
-  background: white;
-  transition-property: background;
-  transition-duration: 2s;
-  transition-timing-function: linear;
+div.send{
+	float:right;
+	margin: 0 1% 0 0;
 }
 
-.wpcf7-form-control.wpcf7-text:hover{
-  background:black;
-  color: white;
+form.wpcf7-form input{
+	width: 100%;
+}
 
+form.wpcf7-form p{
+	width: 50%;
+	height: 50px;
+	margin: 3% 0;
+}
+
+input[type="submit"].wpcf7-form-control.wpcf7-submit{
+	background: rgba(13, 27, 30, 0.4);
+	color: white;
+	text-shadow: none;
+}
+
+p.message{
+	position: absolute;
+	top: 35%;
+	bottom: 0;
+	right: -6%;	
+}
+
+.page-h1{
+	font-size: 3em;
+	font-variant: small-caps;
+	color: rgba(13, 27, 30, 0.5); 
 }
 
 span.wpcf7-form-control-wrap.your-name input,
@@ -933,43 +950,25 @@ span.wpcf7-form-control-wrap.your-email input[type="email"]{
 	border-right: none;
 }
 
-form.wpcf7-form p{
-	width: 50%;
-	height: 50px;
-	margin: 3% 0;
-}
-
-form.wpcf7-form input{
-	width: 100%;
-}
-
-p.message{
-	position: absolute;
-	top: 35%;
-	bottom: 0;
-	right: -6%;
-	
-}
-
-
-div.send{
-	float:right;
-	margin: 0 1% 0 0;
-}
-
-input[type="submit"].wpcf7-form-control.wpcf7-submit{
-	background: rgba(13, 27, 30, 0.4);
-	color: white;
-	text-shadow: none;
-}
-
 span.wpcf7-form-control-wrap.your-message textarea{
-	border: 7px solid rgba(13, 27, 30, 0.4);
+	border: 7px double rgba(13, 27, 30, 0.4);
 	height: 250px;
 	width: 500px;
 }
 
+.wpcf7-form-control.wpcf7-text {
+	background: white;
+	transition-property: background;
+	transition-duration: 2s;
+	transition-timing-function: linear;
+}
 
+.wpcf7-form-control.wpcf7-text:hover{
+	background:rgb(220, 204, 163);
+	color: white;
+}
+
+/* END OF CONTACT/PAGE  **********************************************/
 
 /*--------------------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------------- START OF MEDIA QUERIES ------------------------------------------------*/
