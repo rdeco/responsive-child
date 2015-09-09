@@ -29,18 +29,13 @@ serif:   	-> font-family: 'Adamina', serif;
 
 /* START OF GLOBAL STYLES **********************************************/
 
-.breadcrumb-list,
-.woocommerce .woocommerce-breadcrumb{
-	padding-bottom: 3%;
+/* links & buttons */
+
+a,
+.post-data a{
+	color: rgba(13, 27, 30, 0.6);
 }
 
-#container{
-	max-width: 1200px;
-}
-
-ins {
-	color: rgb(161, 48, 52);	
-}
 
 a:hover,
 input[type="submit"]:hover, 
@@ -48,8 +43,83 @@ input[type="submit"]:hover,
 .woocommerce a.button:hover, 
 .woocommerce button.button:hover, 
 .woocommerce input.button:hover{
-	color: rgba(0, 0, 0, 0.42);
+	/*color: rgba(0, 0, 0, 0.42);*/
+	color:rgba(13, 27, 30, 0.8);
 }
+
+
+.woocommerce button.button.alt,
+.woocommerce-cart .wc-proceed-to-checkout,
+.woocommerce ul.products li.product .button{
+	border: 3px solid black;
+	border-radius: 0;
+	color: black;
+	font-weight: 100;
+	background: white;	
+}
+
+
+#logo a img:hover, /* landing page */
+.woocommerce button.button.alt:hover, /* product page */
+.woocommerce-cart .wc-proceed-to-checkout:hover, /* cart */
+.woocommerce ul.products li.product .button:hover /* products archive */{
+	color: black;
+	background: white;
+		border: 3px solid black;
+	transform:scale(0.9,0.9);
+		-webkit-transform:scale(0.9,0.9);
+		-ms-transform:scale(0.9,0.9);
+	transition: all 0.5s ease-in-out;		
+		-webkit-transition: all 1s ease-in-out; 	
+}
+
+.button--shikoba:hover,
+.menu,
+.menu a:hover,
+.menu .current_page_item a, 
+.menu .current-menu-item a,
+ul.menu > li:hover,
+.woocommerce button.button.alt:hover {
+	background: white;
+	color: black;
+}
+
+.read-more a{
+	padding: 7% 6%;
+	background:rgba(13, 27, 30, 0.3);
+	color:white;
+	font-size: 0.9em;
+}
+
+.woocommerce #respond input#submit{
+	background: transparent;
+}
+
+input[type="submit"].wpcf7-form-control.wpcf7-submit{
+	background: rgba(13, 27, 30, 0.4);
+	color: white;
+	text-shadow: none;
+}
+
+.woocommerce #review_form #respond .form-submit input{
+	background: rgba(13, 27, 30, 0.4);
+	border: 0;
+	color: white;
+	text-shadow: none;
+	font-variant: small-caps;
+	letter-spacing: 1px;	
+}
+
+.read-more a:hover,
+input[type="submit"].wpcf7-form-control.wpcf7-submit:hover,
+.woocommerce #review_form #respond .form-submit input:hover{
+	background:  rgba(13, 27, 30, 0.2);
+	color: white;
+}
+
+/* end of links & buttons */
+
+/* fonts */
 
 .button.button--shikoba,
 .landing-page-intro,
@@ -79,6 +149,51 @@ p.total,
 .widget-title h3{
 	font-family: 'Lato', sans-serif;
 }
+
+
+/* end of fonts */
+
+/* colors */
+
+
+ins {
+	color: rgb(161, 48, 52);	
+}
+
+.widget-title h3{
+	color: rgba(13, 27, 30, 0.7);
+}
+
+.woocommerce .woocommerce-message{
+	border-top-color: rgb(161, 48, 52);
+}
+
+.woocommerce .woocommerce-message::before{
+	color: rgb(161, 48, 52);	
+}
+
+.button--shikoba:hover .button__icon,
+.button--shikoba:hover > span,
+p.price > span,
+.woocommerce ul.products li.product .price,
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button,
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover{
+   color: black;
+}
+
+
+
+/* end of colors */
+
+.breadcrumb-list,
+.woocommerce .woocommerce-breadcrumb{
+	padding-bottom: 3%;
+}
+
+#container{
+	max-width: 1200px;
+}
+
 
 a.button:hover,
 input[type="submit"]:hover,
@@ -110,40 +225,6 @@ th,
 	display: block;
 }
 
-
-.woocommerce .woocommerce-message{
-	border-top-color: rgb(161, 48, 52);
-}
-
-.woocommerce .woocommerce-message::before{
-	color: rgb(161, 48, 52);	
-}
-
-p.form-submit,
-.woocommerce button.button.alt,
-.woocommerce-cart .wc-proceed-to-checkout,
-.woocommerce ul.products li.product .button{
-	border: 3px solid black;
-	border-radius: 0;
-	color: black;
-	font-weight: 100;
-	background: white;	
-}
-
-
-#logo a img:hover, /* landing page */
-.woocommerce button.button.alt:hover, /* product page */
-.woocommerce-cart .wc-proceed-to-checkout:hover, /* cart */
-.woocommerce ul.products li.product .button:hover /* products archive */{
-	color: black;
-	background: white;
-	transform:scale(0.9,0.9);
-		-webkit-transform:scale(0.9,0.9);
-		-ms-transform:scale(0.9,0.9);
-	transition: all 0.5s ease-in-out;		
-		-webkit-transition: all 1s ease-in-out; 	
-}
-
 .button.button--shikoba,
 div.cross-sells,
 div.panel.entry-content.wc-tab > h2, 
@@ -155,32 +236,10 @@ div.upsells.products > h2,
 .widget-title h3,
 .woocommerce button.button.alt,
 .woocommerce-cart .wc-proceed-to-checkout,
+.woocommerce #reviews #comments h2,
 .woocommerce ul.products li.product .button {
 	font-variant: small-caps;
 }
-
-a,
-.button--shikoba:hover .button__icon,
-.button--shikoba:hover > span,
-p.price > span,
-.woocommerce ul.products li.product .price,
-.woocommerce-cart .wc-proceed-to-checkout a.checkout-button,
-.woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover{
-   color: black;
-}
-  
-
-.button--shikoba:hover,
-.menu,
-.menu a:hover,
-.menu .current_page_item a, 
-.menu .current-menu-item a,
-ul.menu > li:hover,
-.woocommerce button.button.alt:hover {
-	background: white;
-	color: black;
-}
-
 
 /* END OF GLOBAL STYLES ***************************************************/
 
@@ -435,6 +494,23 @@ div#black-studio-tinymce-2  p {
 
 /* END OF FOOTER & FOOTER WIDGETS *******************************************************/
 
+/* START OF SINGLE PRODUCT TABS */
+
+.woocommerce #reviews h3{
+	margin-top: 10%;
+	margin-bottom: 5%;
+}
+
+.woocommerce #reviews #comments ol.commentlist{
+	border-bottom: 5px solid rgba(13, 27, 30, 0.1);	
+}
+
+.woocommerce #reviews #comments ol.commentlist li .comment-text {
+	border: none;
+}
+
+/* END OF SINGLE PRODUCT TABS */
+
 /* START OF LANDING PAGE  ***********************************************/
 
 /* ADD IMAGES FOR LANDING PAGE HERE */
@@ -676,6 +752,11 @@ ul.products > li{
 	margin-top: 5%;
 }
 
+.woocommerce ul.products li.product, 
+.woocommerce-page ul.products li.product{
+	margin: 5% 2.8% 2.992em 0;
+}
+
 .woocommerce ul.products li.product h3{
 	height: 10%;
 	letter-spacing: 1px;
@@ -699,9 +780,48 @@ h1.product_title.entry-title{
 	font-style: italic;
 }
 
+.woocommerce div.product div.images div.thumbnails{
+	margin-bottom: 20%;
+}
+
 .woocommerce-tabs.wc-tabs-wrapper{
 	margin-bottom: 15%;
 }
+
+/* product info tabs */
+
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li{
+	background: black;
+	border: 4px double #d3ced2;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li a{
+	color: white;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li:after{
+	box-shadow: none;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li::before{
+	border:none;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs::before{
+	border-bottom: 4px double #d3ced2;	
+	
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li:hover,
+.woocommerce div.product .woocommerce-tabs ul.tabs li:active,
+.woocommerce div.product .woocommerce-tabs ul.tabs li:focus{
+	border-bottom: none;
+	background: white;
+	transition: all 0.5s ease-in-out;		
+		-webkit-transition: all 1s ease-in-out; 
+}
+
 
 /* END OF PRODUCT PAGE  **********************************************/
 
@@ -863,7 +983,8 @@ div#content-blog .post-entry {
 
 .read-more{
 	display: inline-block;
-	margin: -3% 0;
+	margin:  0;
+	width: 15%;
 	font-size: 1.2em;
 	font-style: italic;
 	float: right;
@@ -903,7 +1024,7 @@ p.form-submit{
 
 div.send{
 	float:right;
-	margin: 0 1% 0 0;
+	margin: 2% 1% 0 0;
 }
 
 form.wpcf7-form input{
@@ -913,13 +1034,7 @@ form.wpcf7-form input{
 form.wpcf7-form p{
 	width: 50%;
 	height: 50px;
-	margin: 3% 0;
-}
-
-input[type="submit"].wpcf7-form-control.wpcf7-submit{
-	background: rgba(13, 27, 30, 0.4);
-	color: white;
-	text-shadow: none;
+	margin: 0 0 3% 0;
 }
 
 p.message{
@@ -1235,6 +1350,10 @@ span.wpcf7-form-control-wrap.your-message textarea{
 /*--------------------------------------------------------------------------------------------------------------------*/
 /*----------------------------------------------- END OF MEDIA QUERIES -----------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
 
 
 
