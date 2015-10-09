@@ -4,7 +4,8 @@
     */
     
     get_header(); ?>
-            <div id="about-me" class="about-me">
+	            <?php custom_breadcrumbs(); ?> 
+        <div id="about-me" class="about-me">
          	<?php
 		 		$args = array(
 		 			'post_type' => 'about-us'	
@@ -21,13 +22,13 @@
                         <h2><?php the_title(); ?></h2>
                         <?php the_field('summary'); ?>	                     
                     </article>	
-					<div id="about-content" class="about-content left"> 
+					<aside id="about-content" class="about-content left"> 
 						<p class="about-read-more left">read more</p>
 	                    <figure class="about-figure img-left">		
 	                        <?php  the_post_thumbnail('large'); ?>		
 	                    </figure>
 						<?php the_content(); ?>
-					</div>
+					</aside>
                 </section>
         	</div>
         	
