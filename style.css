@@ -1223,25 +1223,17 @@ span.wpcf7-form-control-wrap.your-message textarea{
 /* Clear floats of children */
 
 .about-article:before,
-.about-article:after {
-	content: " ";
-	display: table;
-}
-
-.about-article:after {
-	clear: both;
-}
-
+.about-article:after,
 .about-section:before,
 .about-section:after {
 	content: " ";
 	display: table;
 }
 
-.about-section:after {
+.about-article:after,
+.about-section:after  {
 	clear: both;
 }
-
 
 /* text */
 
@@ -1418,22 +1410,16 @@ span.wpcf7-form-control-wrap.your-message textarea{
 }
 
 /* main container */
+
 .container{
-	/*position:absolute;	
-	top:0px;
-	left:0%;
-	*/	
 	width:100%;
 	height: 870px;
-	background: #fff url(imgs/gem-pile.png) left bottom repeat-x;
-	
+	background: #fff url(imgs/gem-pile.png) left bottom repeat-x;	
 }
 
 .falling-gems {
-
     text-align: center;
 }
-
 
 .falling-gems span {
     display: inline-block;
@@ -1581,8 +1567,13 @@ span.wpcf7-form-control-wrap.your-message textarea{
 	
 	/* blog archive */
 	
-	div.send{
-		margin: 14% -4% 0 0 ;
+	div#content-blog h2 a{
+		font-size: 1.3em;
+	}
+
+	
+	.post-data{
+		margin: -5% 0 0 12%;
 	}
 	
 	.read-more{
@@ -1594,6 +1585,11 @@ span.wpcf7-form-control-wrap.your-message textarea{
 	
 	div.grid.col-620.contact{
 		width: 900px;
+	}
+	
+		
+	div.send{
+		margin: 14% 0% 0 0;
 	}
 	
 	form.wpcf7-form p{
@@ -1637,7 +1633,11 @@ span.wpcf7-form-control-wrap.your-message textarea{
 	}
 	
 	.about-content img{
-		width: 100%;
+		width: 70%;
+	}
+	
+	.about-content .img-left {
+	    margin-left: 3%;
 	}
 	
 	.about-content .img-right{
@@ -1800,6 +1800,11 @@ span.wpcf7-form-control-wrap.your-message textarea{
 
 	/* end of cart page */
 	
+	/* start of blog page */
+	
+
+	/* end of blog page */	
+	
 	/* contact page */
 	
 	form.wpcf7-form p{
@@ -1849,13 +1854,13 @@ span.wpcf7-form-control-wrap.your-message textarea{
 	}
 	
 	.about-article.left{
-		margin: 7% 0 0 0%;
+		margin:  0%;
 		width: 65%;
 	}
 	
 	.about-article.right{
 		float: none;
-		margin: 11% 0 0 26%;
+		margin: 7% 0 0 26%;
 		width: 65%;
 	}
 	
@@ -1863,18 +1868,24 @@ span.wpcf7-form-control-wrap.your-message textarea{
 		text-align: left;
 	}
 	
-	.about-figure.img-left {
-		margin-top: 0;
+	.about-figure.img-left,
+	.about-figure.img-right {
+	
 		width: 150px;
+		height: 200px;
+		background: black;
 	}
 	
-	.about-figure.img-right {
+	.about-figure.img-left{
 		margin-top: 0;
-		width: 150px;		
+	}
+	
+	.about-figure.img-right{
+		margin-top: -5%;
 	}
 	
 	.about-container{
-		height: 700px;
+		height: 650px;
 	}
 	
 		
@@ -1888,6 +1899,10 @@ span.wpcf7-form-control-wrap.your-message textarea{
 		right: 0;	
 	}
 	
+	.about-content img {
+   	 	width: 100%;
+	}
+	
 	.about-content.left p,
 	.about-content.right p{
 		width: 100%;
@@ -1896,13 +1911,13 @@ span.wpcf7-form-control-wrap.your-message textarea{
 	}
 	
 	.about-content.left p{
-		margin-top: 40%;
+		margin: 35% 0 0 0;
 	}
 	
 	.about-content.right p{
-		margin-top:40%;
-	}	
-	
+		margin: 28% 0 0 0 ;
+	}
+
 	.about-read-more{
 		display:none;
 	}
@@ -1935,6 +1950,7 @@ span.wpcf7-form-control-wrap.your-message textarea{
 	
 	/* start of landing page */
 	
+	
 	.dg-wrapper a#img2, 
 	.dg-wrapper a#img3,
 	section.dg-container nav{
@@ -1960,7 +1976,7 @@ span.wpcf7-form-control-wrap.your-message textarea{
 	}
 	
 	.landing-page-intro{
-		margin-bottom: 15%;
+		margin-bottom: 0;
 	}
 	
 	.landing-page-btn-wrapper{
@@ -2003,11 +2019,12 @@ span.wpcf7-form-control-wrap.your-message textarea{
 	}
 	
 	/* product page */
-	
-	.woocommerce div.product .product_title	{
-		margin-top: -18%;
-	}
 
+	.woocommerce div.product .product_title{
+		position:absolute;
+		top: 0;
+	}	
+	
 	/* product info tabs */
 
 	p.stars{
@@ -2114,11 +2131,7 @@ span.wpcf7-form-control-wrap.your-message textarea{
 	form.wpcf7-form p{
 		width: 100%;
 	}
-	
-	div.message{
-		position: initial;
-		width: 100%;
-	}
+
 	
 	div.send{
 		float:right;
@@ -2225,13 +2238,26 @@ span.wpcf7-form-control-wrap.your-message textarea{
 		width: 90%;
 	}
 
+
 	.dg-wrapper{
 		width: 230px;
 	}
+	
+	.dg-wrapper a#img1{
+		background: transparent url(imgs/mobile_blue_angel.jpg) no-repeat;	
+	}
+	
+	.fa.fa-circle.front-page {
+    	font-size: 6px;
+	}
 		
 	header.landing-page > h1{
-		font-size: 1.5em;		
+		font-size: 2.3em;		
 		width: 100%;
+	}
+	
+	header.landing-page > p {
+    	font-size: 1.2em;
 	}
 
 
@@ -2244,6 +2270,13 @@ span.wpcf7-form-control-wrap.your-message textarea{
 	
 	/* product page */
 
+	.woocommerce div.product div.images img{
+		margin-top: 30%;
+	}
+	
+	.woocommerce div.product .product_title{
+		margin: -20% 0 0 0;
+	}
 
 	.woocommerce div.product form.cart, 
 	.woocommerce div.product p.cart{
@@ -2285,21 +2318,50 @@ span.wpcf7-form-control-wrap.your-message textarea{
 	/* contact page */
 	
 	div.grid.col-620.contact{
-		width: 250px;
+		max-width: 100%;
+	}	
+		
+	div.message{
+		position: initial;
+		width: 100%;
 	}
 	
 	div.wpcf7-validation-errors{
 		margin: 35% 0 -5% 0;
 	}
-	
-	span.wpcf7-form-control-wrap.your-message textarea{
-		width: 250px;
-	}
-	
+
+	span.wpcf7-form-control-wrap.your-message textarea,	
 	.wpcf7-form-control.wpcf7-text{
-		width: 250px;
+		width: 100%;
 	}	
 	
+	/* start of about page */
+			
+	.about-figure{
+		display:none;
+	}
+	
+	
+	.about-content.right p,
+	.about-content.left p{
+		position: absolute;
+		z-index: 999;
+		width: initial;		
+		height: auto;
+		background: white;
+		font-size: 0.9em;
+		text-align: justify;	
+	}
+	
+	
+}
+/*------------ END OF MIN-WIDTH 320px and MAX-WIDTH 415px (iphone4, iphone5, iphone6, iphone6+ portrait)-------------*/
+
+
+/*------------ START OF MIN-WIDTH 320px and MAX-WIDTH 373px ( iphone4, iphone5 portrait - for about page only)-------------*/
+
+@media only screen and (min-width: 20.000em) and (max-width: 23.313em) {
+
 	/* start of about page */
 		
 	.about-article.left{
@@ -2311,16 +2373,6 @@ span.wpcf7-form-control-wrap.your-message textarea{
 		right: -10%;
 	}
 
-	.about-content.right p,
-	.about-content.left p{
-		position: absolute;
-		z-index: 999;
-		width: initial;		
-		height: auto;
-		background: white;
-		font-size: 0.9em;
-		text-align: justify;	
-	}
 	
 	.about-content.left p{
 		margin: 0 0 0 -21%;
@@ -2334,13 +2386,44 @@ span.wpcf7-form-control-wrap.your-message textarea{
 		margin-top: 30%;
 		width: initial;		
 	}
+
 	
-	.about-figure{
-		display:none;
-	}	
-		
 }
-/*------------ END OF MIN-WIDTH 320px and MAX-WIDTH 415px (iphone4, iphone5, iphone6, iphone6+ portrait)-------------*/
+
+/*------------ END  OF MIN-WIDTH 320px and MAX-WIDTH 374px ( iphone4, iphone5 portrait - for about page only)-------------*/
+
+/*------------ START OF MIN-WIDTH 374px and MAX-WIDTH 414px ( iphone6, iphone6+ portrait - for about page only)-------------*/
+
+@media only screen and (min-width: 23.375em) and (max-width: 25.93em) {
+
+	/* start of about page */
+	
+	.about-container{
+		height: 900px;
+	}	
+	
+	.about-article.left {
+    	margin: -27% 0 0 0;
+	}
+	
+	.about-article.right {
+   		margin: 15% -8% 0 0%;
+	}
+	
+	.about-content.left p{
+	    margin: 30% 5% 0 -2%;
+	}
+		
+	.about-content.right p {
+		margin: 10% 5% 0 -2%;
+	}
+
+	
+}
+
+/*------------ END  OF MIN-WIDTH px and MAX-WIDTH px ( iphone6, iphone6+ portrait - for about page only)-------------*/
+
+
 
 /*------------ START OF MIN-WIDTH 416px and MAX-WIDTH 568px ( iphone4, iphone5 landscape)-------------*/
 
@@ -2391,7 +2474,10 @@ span.wpcf7-form-control-wrap.your-message textarea{
 	.button.button--shikoba{
 		width: 50%;
 	}
-
+	
+	.dg-wrapper a#img1{
+		background: transparent url(imgs/mobile_blue_angel.jpg) no-repeat;	
+	}
 	
 	.dg-wrapper{
 		width: 230px;
@@ -2410,6 +2496,14 @@ span.wpcf7-form-control-wrap.your-message textarea{
 	}
 	
 	/* product page */	
+	
+	.woocommerce div.product div.images img{
+		margin-top: 15%;
+	}
+	
+	.woocommerce div.product .product_title{
+		margin: -10% 0 0 0;
+	}
 
 	.woocommerce div.product form.cart, 
 	.woocommerce div.product p.cart{
@@ -2464,27 +2558,40 @@ span.wpcf7-form-control-wrap.your-message textarea{
 	/* contact page */
 
 	div.grid.col-620.contact{
-		width: 250px;
+		max-width: 100%;
+	}
+	
+	div.message {
+	    position: initial;
 	}
 	
 	span.wpcf7-form-control-wrap.your-message textarea{
-		margin-top: 15%;
+		margin-top: 5%;
 	}
 	
-	.wpcf7-form-control.wpcf7-text{
-		width: 250px;
-	}
+	
 		
 	/* start of about page */
+	
+	.about-article h2{
+		font-size: 2.5em;
+	}
+	
+	.about-article p{
+		font-size: 1.6em;
+	}
+
+	.about-article.left h2{
+		margin-left: 13%;
+	}
 
 	.about-article.left{
-		margin: 15% 0 0 -14%;
+		margin: 15% 0 0 -10%;
 		width: 65%;
 	}
 	
 	.about-article.right{
-		float: none;
-		margin: 20% 0 0 40%;
+		margin: 15% -10% 0 0%;
 		width: 65%;
 	}
 	
@@ -2495,7 +2602,13 @@ span.wpcf7-form-control-wrap.your-message textarea{
 	.about-container{
 		height: 800px;
 	}
-			
+	
+	#about-content{
+		height: 100vh;
+		margin-top: 0;
+	}
+		
+		
 	.about-content{
 		right: 0;	
 	}
@@ -2507,22 +2620,32 @@ span.wpcf7-form-control-wrap.your-message textarea{
 	}
 	
 	.about-content.left p{
-		margin-top: 55%;
+		margin-top: 53%;
+	
 	}	
 
 	.about-content.right p{
-		margin-top: 55%;
-	}	
+		margin-top: 53%;
+	}		
 	
 	.about-figure.img-left {
 		margin-top: 0;
 		width: 150px;
+		height: 200px;
+		background: black;	
 	}
 	
 	.about-figure.img-right {
 		margin-top: 0;
-		width: 150px;		
+		width: 150px;
+		height: 200px;
+		background: black;		
 	}
+	
+	.about-section.even{
+		margin-top: -45%;
+	}
+	
 		
 }
 
@@ -2555,8 +2678,7 @@ span.wpcf7-form-control-wrap.your-message textarea{
 
 		
 	header.landing-page > h1{
-		width: 60%;
-		font-size: 1.9em;
+		font-size: 3em;
 	}
 	
 	/* shop archive page */
@@ -2570,9 +2692,12 @@ span.wpcf7-form-control-wrap.your-message textarea{
 	/* product page */
 	
 	.woocommerce div.product div.images img{
-		width: 50%;
+		margin-top: 15%;
 	}
-
+	
+	.woocommerce div.product .product_title{
+		margin: -10% 0 0 0;
+	}
 
 	.woocommerce div.product form.cart, 
 	.woocommerce div.product p.cart{
@@ -2598,13 +2723,16 @@ span.wpcf7-form-control-wrap.your-message textarea{
 
 	/* blog archive */
 	
+	.blog-archive-date	{
+		margin: 1% 2% 0 0;
+	}
 
 	div.author-avatar{
 		margin:  3% 0;
 	}
 
 	div.post-data{
-		margin: -6% 14%;
+		margin: -5% 13%;
 		width: 100%;
 	}
 
@@ -2632,25 +2760,48 @@ span.wpcf7-form-control-wrap.your-message textarea{
 		margin-top: 10%;
 	}
 	
+	.post-entry > p{
+		padding: 2% 4%;
+	}
+	
 	/* contact page */
+	
+	.breadcrumbs{
+		margin: 10% 0 0 0;
+	}
 
 	div.grid.col-620.contact{
 		width: 100%;
 	}
+	
+		
+	div.message{
+	    position: absolute;
+	    top: 37%;
+	    bottom: 0%;
+	    right: -3%;
+	}
+	
+	div.send{
+		margin: 6% 0% 3% 0%;
+	}
 
 	span.wpcf7-form-control-wrap.your-message textarea{
-		width: 100%;
+		margin: 0;
+		width: 90%;
+		height: 200px;
 	}
 	
 	.wpcf7-form-control.wpcf7-text{
-		width: 100%;
+		width: 38%;
+		margin-left: 0%;
 	}
 	
 	
 	/* start of about page */
 	
 	.about-article.left{
-		margin: 7% 0 0 0%;
+		margin: -5% 0 0 0%;
 		width: 65%;
 	}
 	
@@ -2684,7 +2835,7 @@ span.wpcf7-form-control-wrap.your-message textarea{
 	}
 	
 	.about-content.right p{
-		margin-top:40%;
+		margin-top: 27%;
 	}	
 	
 		
@@ -2694,7 +2845,7 @@ span.wpcf7-form-control-wrap.your-message textarea{
 	}
 	
 	.about-figure.img-right {
-		margin-top: 0;
+		margin-top: -12%;
 		width: 150px;		
 	}
 	
