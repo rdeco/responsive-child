@@ -3,8 +3,8 @@
         Template Name: About Us Page
     */
     
-    get_header(); ?>
-	            <?php custom_breadcrumbs(); ?> 
+    get_header(); 
+    custom_breadcrumbs(); ?> 
         <div id="about-me" class="about-me">
          	<?php
 		 		$args = array(
@@ -17,7 +17,7 @@
             ?>
             
 			<div class="about-container">
-                <section class="about-section">
+                <section class="about-section odd" >
 					<article class="about-article right">	                       
                         <h2><?php the_title(); ?></h2>
                         <?php the_field('summary'); ?>	                     
@@ -35,7 +35,7 @@
             <?php else: ?>
             
             <div class="about-container">
-                <section class="about-section">
+                <section class="about-section even">
                 
                 	<article class="about-article left">	                      
                         <h2><?php the_title(); ?></h2>
